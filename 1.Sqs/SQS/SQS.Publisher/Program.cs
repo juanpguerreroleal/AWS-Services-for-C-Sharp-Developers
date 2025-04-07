@@ -24,8 +24,7 @@ var sendMessageRequest = new SendMessageRequest()
     MessageAttributes = new Dictionary<string, MessageAttributeValue>()
     {
         {
-            "MessageType", new MessageAttributeValue() { DataType = "String", StringValue = nameof(CustomerCreated) },
-
+            "MessageType", new MessageAttributeValue() { DataType = "String", StringValue = nameof(CustomerCreated) }
         }
     }
 };

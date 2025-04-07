@@ -11,6 +11,10 @@ var queueUrlResponse = await client.GetQueueUrlAsync("customers");
 ReceiveMessageRequest request = new ReceiveMessageRequest
 {
     QueueUrl = queueUrlResponse.QueueUrl,
+    MessageAttributeNames = new List<string>()
+    {
+        "MessageType"
+    }
 };
 
 while (!cts.IsCancellationRequested)
